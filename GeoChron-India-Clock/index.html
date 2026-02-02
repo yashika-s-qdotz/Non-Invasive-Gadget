@@ -3,41 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <title>India GeoChron Clock</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Leaflet -->
+  <!-- Leaflet CSS -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   />
 </head>
+
 <body>
 
-<h1>India GeoChron Clock</h1>
+  <!-- MAIN CONTAINER -->
+  <div class="container">
 
-<div class="form">
-  <label>Date:</label>
-  <input type="date" id="date">
+    <h1>India GeoChron Clock</h1>
 
-  <label>Time (IST):</label>
-  <input type="time" step="1" id="time">
+    <!-- PLACE NAME (CENTER HIGHLIGHT) -->
+    <div id="placeName">---</div>
 
-  <label>Pincode:</label>
-  <input type="text" id="pincode">
+    <!-- INPUT FORM -->
+    <div class="form">
+      <label for="date">Date:</label>
+      <input type="date" id="date">
 
-  <button onclick="calculateGeoChron()">Get GeoChron Time</button>
-</div>
+      <label for="time">Time (IST):</label>
+      <input type="time" step="1" id="time">
 
-<div class="output">
-  <p><b>Latitude:</b> <span id="lat">--</span></p>
-  <p><b>Longitude:</b> <span id="lon">--</span></p>
-  <p><b>GeoChron Time:</b> <span id="geoTime">--</span></p>
-</div>
+      <label for="pincode">Pincode:</label>
+      <input type="text" id="pincode">
 
-<div id="map"></div>
+      <button onclick="calculateGeoChron()">Get GeoChron Time</button>
+    </div>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="script.js"></script>
+    <!-- OUTPUT -->
+    <div class="output">
+      <p><b>Latitude:</b> <span id="lat">--</span></p>
+      <p><b>Longitude:</b> <span id="lon">--</span></p>
+      <p><b>GeoChron Time:</b> <span id="geoTime">--</span></p>
+    </div>
+
+    <!-- MAP -->
+    <div id="map"></div>
+
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Your Script -->
+  <script src="script.js"></script>
 
 </body>
 </html>
