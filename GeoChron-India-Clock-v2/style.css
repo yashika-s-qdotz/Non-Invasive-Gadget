@@ -1,0 +1,73 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  background: #f4f6f9;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #0b5ed7;
+}
+
+#placeName {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  background: #e7f1ff;
+  color: #0b5ed7;
+  padding: 10px;
+  margin: 15px auto 25px;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 12px;
+}
+
+.form label {
+  text-align: right;
+  font-weight: bold;
+}
+
+.form input,
+.form select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  grid-column: span 2;
+  padding: 10px;
+  font-size: 16px;
+  background: #0b5ed7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.output {
+  margin-top: 20px;
+  background: #f8f9fb;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#map {
+  height: 450px;
+  margin-top: 20px;
+  border-radius: 12px;
+}

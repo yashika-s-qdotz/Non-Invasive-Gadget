@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>India GeoChron Clock</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+</head>
+<body>
+
+<div class="container">
+
+  <h1>India GeoChron Clock</h1>
+
+  <div id="placeName">---</div>
+
+  <div class="form">
+    <label>Date:</label>
+    <input type="date" id="date">
+
+    <label>Time (IST):</label>
+    <input type="time" step="1" id="time">
+
+    <label>Pincode:</label>
+    <input type="text" id="pincode">
+
+    <button onclick="fetchLocations()">Fetch Locations</button>
+
+    <label>Select Area:</label>
+    <select id="areaSelect">
+      <option value="">-- select --</option>
+    </select>
+
+    <button onclick="calculateGeoChron()">Get GeoChron Time</button>
+  </div>
+
+  <div class="output">
+    <p><b>Latitude:</b> <span id="lat">--</span></p>
+    <p><b>Longitude:</b> <span id="lon">--</span></p>
+    <p><b>GeoChron Time:</b> <span id="geoTime">--</span></p>
+  </div>
+
+  <div id="map"></div>
+
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
